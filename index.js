@@ -1,10 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+    const testedValues = [];
+    for (let i = 0; i < array.length; i++) {
+      const currentValue = array[i];
+      if (testedValues.includes(target - currentValue)) {
+        return true;
+      }
+      testedValues.push(currentValue);
+    }
+    return false;
+  }
 
-/* 
-  Write the Big O time complexity of your function here
-*/
+  // Write the Big O time complexity of your function here
 
 /* 
   Add your pseudocode here
